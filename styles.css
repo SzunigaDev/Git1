@@ -1,0 +1,107 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;  
+}
+
+.calculadora-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+  max-width: 100%;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+#resultado {
+  width: calc(100% - 20px); /* Ajustar el ancho para dejar espacio para el cursor */
+  padding: 10px;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  text-align: right;
+  cursor: text; /* Añadir cursor tipo texto */
+}
+
+.cursor {
+  position: absolute;
+  top: 0; /* Alinear en la parte superior del contenedor */
+  right: 5px; /* Ajustar posición a la derecha del campo de entrada */
+  height: 100%;
+  width: 2px;
+  background-color: #666666; /* Color del cursor */
+  animation: cursorParpadeo 1s infinite; /* Animación de parpadeo */
+}
+
+@keyframes cursorParpadeo {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.numero {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.operador {
+  background-color: #FF8C00;
+  color: #fff;
+}
+
+.igual {
+  width: 100%;
+  background-color: #294e2a;
+  color: #fff;
+}
+
+.limpiar {
+  background-color: #FF0000;
+  color: #fff;
+}
+
+.decimal {
+  background-color: #008CFF;
+  color: #fff;
+}

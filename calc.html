@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculadora-container">
+    <h2>Calculadora Web</h2>
+    <form id="calculadoraForm">
+        <div class="input-container">
+            <input type="text" id="resultado" disabled>
+            <div class="cursor" id="cursor"></div>
+        </div>
+        <div class="botones">
+            <div class="fila">
+                <button class="numero" type="button" onclick="agregarNumero('7')">7</button>
+                <button class="numero" type="button" onclick="agregarNumero('8')">8</button>
+                <button class="numero" type="button" onclick="agregarNumero('9')">9</button>
+                <button class="operador" type="button" onclick="agregarOperador('/')">/</button>
+            </div>
+            <div class="fila">
+                <button class="numero" type="button" onclick="agregarNumero('4')">4</button>
+                <button class="numero" type="button" onclick="agregarNumero('5')">5</button>
+                <button class="numero" type="button" onclick="agregarNumero('6')">6</button>
+                <button class="operador" type="button" onclick="agregarOperador('*')">*</button>
+            </div>
+            <div class="fila">
+                <button class="numero" type="button" onclick="agregarNumero('1')">1</button>
+                <button class="numero" type="button" onclick="agregarNumero('2')">2</button>
+                <button class="numero" type="button" onclick="agregarNumero('3')">3</button>
+                <button class="operador" type="button" onclick="agregarOperador('-')">-</button>
+            </div>
+            <div class="fila">
+                <button class="numero" type="button" onclick="agregarNumero('0')">0</button>
+                <button class="decimal" type="button" onclick="agregarDecimal()">.</button>
+                <button class="limpiar" type="button" onclick="limpiar()">C</button>
+                <button class="operador" type="button" onclick="agregarOperador('+')">+</button>
+            </div>
+            <div class="#!">
+                <button class="igual" type="button" onclick="calcular()">=</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
